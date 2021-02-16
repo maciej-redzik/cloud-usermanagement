@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "user-management-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/userManagement/UserManagementWebPart.js",
+          "manifest": "./src/webparts/userManagement/UserManagementWebPart.manifest.json"
+        }
+      ]
+    },
+    "user-management-page-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/userManagementPage/UserManagementPageWebPart.js",
+          "manifest": "./src/webparts/userManagementPage/UserManagementPageWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "UserManagementWebPartStrings": "lib/webparts/userManagement/loc/{locale}.js",
+    "UserManagementPageWebPartStrings": "lib/webparts/userManagementPage/loc/{locale}.js"
+  }
+}

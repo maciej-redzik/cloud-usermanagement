@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "77e912a5-7320-43a0-ab8b-bd7b3f6b7da2",
+  "alias": "UserManagementPageWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "UserManagementPage" },
+    "description": { "default": "UserManagementPage description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "UserManagementPage"
+    }
+  }]
+}
