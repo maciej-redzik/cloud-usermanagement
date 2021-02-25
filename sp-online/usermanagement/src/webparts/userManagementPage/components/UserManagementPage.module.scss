@@ -2,8 +2,8 @@
 
 .userManagementPage {
   .container {
-    max-width: 700px;
-    margin: 0px auto;
+    max-width: 100%;
+    padding: 20px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
 
@@ -24,12 +24,12 @@
 
   .title {
     @include ms-font-xl;
-    @include ms-fontColor-white;
+    @include ms-fontColor-black;
   }
 
   .subTitle {
     @include ms-font-l;
-    @include ms-fontColor-white;
+    @include ms-fontColor-black;
   }
 
   .description {
@@ -38,11 +38,9 @@
   }
 
   .button {
-    // Our button
     text-decoration: none;
     height: 32px;
 
-    // Primary Button
     min-width: 80px;
     background-color: $ms-color-themePrimary;
     border-color: $ms-color-themePrimary;
@@ -70,5 +68,23 @@
       vertical-align: top;
       display: inline-block;
     }
+
+
+  }
+  .outerContainer {
+    padding: 20px;
+  }
+
+  .buttonsRow {
+    margin: 10px 0;
+    button {
+      margin-right: 10px;
+    }
+  }
+  // Details List
+  .detailsList {
+    margin: 10px 0;
+    width: fit-content;
+    border: 1px solid $ms-color-neutralLight;
   }
 }

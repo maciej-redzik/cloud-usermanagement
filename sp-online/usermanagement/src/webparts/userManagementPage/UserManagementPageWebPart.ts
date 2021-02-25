@@ -1,15 +1,15 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { Version } from '@microsoft/sp-core-library';
+import {Version} from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import {BaseClientSideWebPart} from '@microsoft/sp-webpart-base';
 
 import * as strings from 'UserManagementPageWebPartStrings';
 import UserManagementPage from './components/UserManagementPage';
-import { IUserManagementPageProps } from './components/IUserManagementPageProps';
+import {IUserManagementPageProps} from './components/IUserManagementPageProps';
 
 export interface IUserManagementPageWebPartProps {
   description: string;
@@ -18,13 +18,7 @@ export interface IUserManagementPageWebPartProps {
 export default class UserManagementPageWebPart extends BaseClientSideWebPart<IUserManagementPageWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IUserManagementPageProps> = React.createElement(
-      UserManagementPage,
-      {
-        description: this.properties.description
-      }
-    );
-
+    const element: React.ReactElement<IUserManagementPageProps> = React.createElement(UserManagementPage, {});
     ReactDom.render(element, this.domElement);
   }
 
@@ -32,17 +26,17 @@ export default class UserManagementPageWebPart extends BaseClientSideWebPart<IUs
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
+  // @ts-ignore
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
-      pages: [
+      pages:
+      [
         {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
+          header: { description: strings.PropertyPaneDescription },
           groups: [
             {
               groupName: strings.BasicGroupName,
